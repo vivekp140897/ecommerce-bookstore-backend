@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/bookstore_test}
+    username: ${DB_USERNAME:bookstore}
+    password: ${DB_PASSWORD:changeme}
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  flyway:
+    enabled: false
+
+app:
+  jwt:
+    secret: dGVzdFNlY3JldEtleUZvclRlc3RpbmdPbmx5TXVzdEJlQXRMZWFzdDUxMkJpdHNMb25n
+    access-token-expiry-ms: 900000
+    refresh-token-expiry-ms: 604800000
